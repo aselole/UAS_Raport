@@ -1,0 +1,1 @@
+<?php $host = "localhost"; $user = "traju_anom"; $pass = "123456"; $db = "traju_raport"; $konek = mysql_connect($host, $user, $pass) or die ('Koneksi Gagal! '); mysql_select_db($db); ?>

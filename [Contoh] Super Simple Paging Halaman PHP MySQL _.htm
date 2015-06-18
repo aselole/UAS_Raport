@@ -1,0 +1,1343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head profile="http://gmpg.org/xfn/11"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><link href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/css_002.css" rel="stylesheet" type="text/css"><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>[Contoh] Super Simple Paging Halaman PHP MySQL |</title>
+<link rel="pingback" href="http://bimosaurus.com/xmlrpc.php">
+<link rel="alternate" type="application/rss+xml" title=" » Feed" href="http://bimosaurus.com/feed/">
+<link rel="alternate" type="application/rss+xml" title=" » Comments Feed" href="http://bimosaurus.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title=" » [Contoh] Super Simple Paging Halaman PHP MySQL Comments Feed" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/feed/">
+<link rel="stylesheet" id="crayon-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/crayon.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-neon-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/neon.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-courier-new-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/courier-new.css" type="text/css" media="all">
+<link rel="stylesheet" id="wordpress-popular-posts-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/wpp.css" type="text/css" media="all">
+<link rel="stylesheet" id="thematic_style-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-droid_sans-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-ubuntu-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/css_003.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-font-league_gothic-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/stylesheet.css" type="text/css" media="all">
+<link rel="stylesheet" id="formalize-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/formalize.css" type="text/css" media="all">
+<link rel="stylesheet" id="tipsy-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/tipsy.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-jBreadCrumb-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/BreadCrumb.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-prettyPhoto-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/prettyPhoto.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-ui-css" href="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/jquery-ui-1.css" type="text/css" media="all">
+<script async="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/cbgapi.loaded_1"></script><script async="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/cbgapi.loaded_0"></script><script gapi_processed="true" style="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/plusone.js" async="" type="text/javascript"></script><script src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/all.js" id="facebook-jssdk"></script><script src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/jquery_004.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/jquery-migrate.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.4.1","is_admin":"0","ajaxurl":"http:\/\/bimosaurus.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/crayon.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/comment-reply.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/superfish.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/supersubs.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/thematic-dropdowns.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/jquery_003.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/jquery_002.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/jquery.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/jquery-unselectable.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/jquery_005.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/jquery_006.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bimosaurus.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bimosaurus.com/wp-includes/wlwmanifest.xml"> 
+
+<link rel="shortlink" href="http://bimosaurus.com/?p=225">
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Contoh] Super Simple Paging Halaman PHP MySQL">
+<meta property="og:url" content="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/">
+<meta property="og:description" content="Berdasarkan sebuah request/permintaan melalui surel, seorang rekan saya menanyakan : dapatkah Paging/penomoran halaman dipermudah , dipersingkat, tanpa ribet koding namun juga tidak ribet memenuhi ...">
+<meta name="twitter:site" content="@jetpack">
+<meta name="twitter:card" content="summary">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+<!-- All in One SEO Pack 2.0.4 by Michael Torbert of Semper Fi Web Design[286,339] -->
+<meta name="description" content="Paging penomoran halaman digunakan untuk membatasi jumlah item yang akan ditampilkan dalam halaman web berdasar halaman. Pemberian nomor halaman sederhana">
+
+<meta name="keywords" content="simple, sederhana, paging, nomor, halaman, pemberian, item per page, php, mysql,halaman,mysql,nomor,page,paging,php,sederhana,html">
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><script src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/commonutilstats.js" charset="UTF-8" type="text/javascript"></script><script src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/mapmarker.js" charset="UTF-8" type="text/javascript"></script><script src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/onion.js" charset="UTF-8" type="text/javascript"></script><script src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/controls.js" charset="UTF-8" type="text/javascript"></script></head><body class="single single-post postid-225 single-format-standard windows firefox ff9">Web Tutorial
+<link rel="canonical" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/">
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-25685858-1']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+
+<style type="text/css">
+#gallery-stripe, #gallery-stripe-bg, .gallery-playback {height:95px;}
+.gallery-list-pad {margin:0 30px;}
+ul.gallery-stripe {height:70px;}
+ul.gallery-stripe li {width:60px;}
+ul.gallery-stripe li a {width:60px; height:60px;}
+</style>
+<meta name="keyword" content="Belajar web, Belajar web cepat, PHP, Wordpress, MySQL, Web Development, Paging, SQL, Advanced Paging, Themes, Excerpt, Resume, More, contoh, cara, membuat, laporan, excel, pdf, jpgraph, grafik, jpgraph, error, graph, plot, 25128, imageantialias, null, xls, send header, ob_start(), undefined, variable, reset, ganti, password, mysql, load_file, into outfile, ddl, dml, bimosaurus, bimo saurus">
+<meta name="description" content="Belajar web cepat, belajar php cepat, Teknik Advanced Paging Trik Tips, contoh cara membuat laporan pdf php mysql, null, contoh cara membuat laporan xls excel dari php mysql, contoh cara inject mysql xls excel, menghilangkan error jpgraph 25128, menghilangan error send header already sent by, undefined variable, reset password root mysql, dml, ddl, load_file, into outfile, dcl, Link More menyingkat excerpt dalam Wordpress">
+
+<meta name="googlebot" content="index,noarchive,follow,noodp">
+    <meta name="robots" content="all,index,follow">
+  <meta name="msnbot" content="all,index,follow">
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0pt; width: 0pt;"><div><iframe src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/dgdTycPTSRj.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/dgdTycPTSRj_002.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0pt; width: 0pt;"><div></div></div></div> 
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/id_ID/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> 
+
+
+
+
+
+<div id="bg-tile">&nbsp;</div><div id="wrapper" class="hfeed">
+   
+	<div id="header">
+        
+        	<div id="branding">
+<div class="branding-content-background"> 
+<div class="branding-content-text">
+    
+    	<div id="blog-title"><span><a href="http://bimosaurus.com/" title="" rel="home"></a></span></div>
+    
+    	<div id="blog-description">Tips Trik Web PHP MySQL Javascript – Bimosaurus</div>
+
+</div> <!-- .branding-content-text -->
+</div> <!-- .branding-content-background -->
+		</div><!--  #branding -->
+    
+    <div id="access">
+    
+    	<div class="skip-link"><a original-title="Skip navigation to the content" href="#content">Skip to content</a></div><!-- .skip-link -->
+    	
+    	<div class="menu"><ul id="menu-menuutama" class="sf-menu sf-js-enabled"><li id="menu-item-510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-510"><a href="http://bimosaurus.com/">Home</a></li>
+<li id="menu-item-511" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-511"><a href="http://bimosaurus.com/demo">Demos</a></li>
+<li id="menu-item-512" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-512"><a href="http://bimosaurus.com/download">Download</a></li>
+<li id="menu-item-513" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-513"><a href="http://bimosaurus.com/category/php/">PHP</a></li>
+<li id="menu-item-514" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-514"><a href="http://bimosaurus.com/category/mysql/">MySQL</a></li>
+<li id="menu-item-515" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-515"><a href="http://bimosaurus.com/category/html/">HTML</a></li>
+<li id="menu-item-516" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-516"><a href="http://bimosaurus.com/category/web-developing/">Web Developing</a></li>
+<li id="menu-item-517" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-517"><a href="http://bimosaurus.com/category/jquery-2/">Jquery</a></li>
+<li id="menu-item-518" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-518"><a href="http://bimosaurus.com/category/css/">CSS</a></li>
+<li id="menu-item-519" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-519"><a href="http://bimosaurus.com/category/linux/">Linux</a></li>
+<li id="menu-item-520" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-520"><a href="http://bimosaurus.com/category/javascript/">javascript</a></li>
+<li id="menu-item-521" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521"><a href="http://bimosaurus.com/category/networking/">Networking</a></li>
+<li id="menu-item-602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-602"><a href="http://bimosaurus.com/contributor/">Contributor</a></li>
+</ul></div>    	
+    </div><!-- #access -->
+            
+	</div><!-- #header-->
+    
+    <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/img.png" height="0px" width="0px">
+	<div id="main">
+<div style="text-align:right;border-bottom:1px #999 solid;">
+<div style="margin-bottom:10px;"><center>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3417930903351402";
+/* top2 */
+google_ad_slot = "1564738017";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="15" scrolling="no" width="728"></iframe></ins></ins>
+
+</center></div>
+</div>
+
+
+		<div id="container">
+<div style="margin-left:30px;float:left;margin-right:20px;"><!-- Place this tag where you want the +1 button to render -->
+		<div id="___plusone_0" style="text-indent: 0pt; margin: 0pt; padding: 0pt; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 450px; height: 24px;"><iframe title="+1" data-gapiattached="true" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/fastbutton.htm" name="I0_1401013120162" id="I0_1401013120162" vspace="0" tabindex="0" style="position: static; top: 0pt; width: 450px; margin: 0px; border-style: none; left: 0pt; visibility: visible; height: 24px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+	
+	<!-- Place this render call where appropriate -->
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script></div>
+	
+	<div fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2Fbimosauruscom%2F392915980752466&amp;layout=button_count&amp;locale=id_ID&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=250" fb-xfbml-state="rendered" style="margin-right:20px; margin-top:10px;float:left;" class="fb-like fb_iframe_widget" data-href="http://www.facebook.com/pages/bimosauruscom/392915980752466" data-send="false" data-layout="button_count" data-width="250" data-show-faces="false" data-colorscheme="light"><span style="vertical-align: bottom; width: 81px; height: 20px;"><iframe class="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/like.htm" style="border: medium none; visibility: visible; width: 81px; height: 20px;" title="fb:like Facebook Social Plugin" allowtransparency="true" name="f4092b56f19c8" frameborder="0" height="1000px" scrolling="no" width="250px"></iframe></span></div>
+	
+	
+	<div style="clear:both;"></div>	
+			<div id="content">
+
+				<div id="nav-above" class="navigation">
+				
+					<div class="nav-previous"><a href="http://bimosaurus.com/2012/04/28/contoh-cara-membuat-grafik-dasar-web-dengan-jquery-highchart/" rel="prev"><span class="meta-nav">«</span> [Contoh] Cara Membuat Grafik Dasar Web Dengan JQuery HighChart</a></div>
+					
+					<div class="nav-next"><a href="http://bimosaurus.com/2012/05/03/hacking-database-kosong-tak-berpassword-berbahayakah/" rel="next">[Hacking] Database kosong tak Berpassword, berbahayakah? <span class="meta-nav">»</span></a></div>
+					
+				</div>
+					
+				<div id="post-225" class="post-225 post type-post status-publish format-standard hentry category-html category-mysql category-php tag-halaman tag-mysql-2 tag-nomor tag-page tag-paging tag-php-2 tag-sederhana tag-simple">
+
+					<h1 class="entry-title">[Contoh] Super Simple Paging Halaman PHP MySQL</h1>
+
+					<div class="entry-meta">
+
+	<span class="meta-prep meta-prep-author">By </span><span class="author vcard"><a original-title="View all posts by bimosaurus" class="url fn n" href="http://bimosaurus.com/author/bimosaurus/">bimosaurus</a></span>
+
+	<span class="meta-sep meta-sep-entry-date"> | </span>
+
+	<span class="meta-prep meta-prep-entry-date">Published: </span><span class="entry-date"><abbr class="published" title="2012-05-01T04:17:57+0000">May 1, 2012</abbr></span>
+
+	
+
+</div><!-- .entry-meta -->
+     				
+					<div class="entry-content">
+					
+						<p>Berdasarkan sebuah request/permintaan melalui surel, seorang 
+rekan saya menanyakan : dapatkah Paging/penomoran halaman dipermudah , 
+dipersingkat, tanpa ribet koding namun juga tidak ribet memenuhi halaman
+ jika halaman hingga ribuan. Sebenarnya paging/ pemberian nomor halaman 
+pada PHP tergantung pada kebutuhan. Biasanya sesuatu yang lengkap akan 
+membutuhkan penanganan yang lengkap juga. Begitu juga dengan paging. 
+Namun kadang dengan analisa yang tepat, bisa juga didapatkan sesuatu 
+yang simple dan enak, dan dapat memenuhi banyak kebutuhan. Berikut 
+disini saya paparkan hasil analisa paging simple penomoran halaman 
+sederhana namun cukup powerfull.</p>
+<p>&nbsp;<br>
+Paging ini dimulai dari penentuan jumlah item tiap halaman yang akan 
+ditampilkan. Selanjutnya dilakukan penangkapan parameter page dari 
+method GET. Dalam contoh, item per halaman ditampilkan 10.</p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa07b6f9920005299" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div style="display: none;" class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">$item_per_page = 10;
+$page =  isset($_GET['page']) ? $_GET['page'] : 1 ;</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa07b6f9920005299-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b6f9920005299-2">2</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa07b6f9920005299-1"><span class="crayon-v">$item_per_page</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">10</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b6f9920005299-2"><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-k ">isset</span><span class="crayon-sy">(</span><span class="crayon-v">$_GET</span><span class="crayon-sy">[</span><span class="crayon-s">'page'</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">?</span><span class="crayon-h"> </span><span class="crayon-v">$_GET</span><span class="crayon-sy">[</span><span class="crayon-s">'page'</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0042 seconds] -->
+<p></p>
+<p>Notasi tersebut berarti $page adalah didapat dari jika $_GET['page'] 
+ter-set. Namun jika tidak akan berisi value 1. Untuk menghindari 
+penomoran melewati batas, seperti kurang dari satu atau berisi value 
+kosong, maka hadang / filter dulu dengan </p>
+<p></p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa07b737872565572" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div style="display: none;" class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">if( ( $page &lt; 1) &amp;&amp; (empty( $page ) ) ){
+      $page=1; 
+   }</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa07b737872565572-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b737872565572-2">2</div><div class="crayon-num" data-line="crayon-53800aa07b737872565572-3">3</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa07b737872565572-1"><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">&amp;&amp;</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-k ">empty</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b737872565572-2"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">$page</span><span class="crayon-o">=</span><span class="crayon-cn">1</span><span class="crayon-sy">;</span><span class="crayon-h"> </span></div><div class="crayon-line" id="crayon-53800aa07b737872565572-3"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-sy">}</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0042 seconds] -->
+<p></p>
+<p>Untuk mendapatkan jumlah halaman berarti harus didapatkan lebih dulu 
+jumlah item yang ada. Jumlah item yang ada didapat dari query SQL.</p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa07b749901947544" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div style="display: none;" class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">   $sql           = "select * from `table`";
+   $query         = mysql_query( $sql );
+   $jumlah_data   = mysql_num_rows($query);
+   $jumlah_hal    = ceil( $jumlah_data/$item_per_page );</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa07b749901947544-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b749901947544-2">2</div><div class="crayon-num" data-line="crayon-53800aa07b749901947544-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b749901947544-4">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa07b749901947544-1"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$sql</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">"select * from `table`"</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b749901947544-2"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$query</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">mysql_query</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$sql</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-53800aa07b749901947544-3"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$jumlah_data</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">mysql_num_rows</span><span class="crayon-sy">(</span><span class="crayon-v">$query</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b749901947544-4"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$jumlah_hal</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">ceil</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$jumlah_data</span><span class="crayon-o">/</span><span class="crayon-v">$item_per_page</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0054 seconds] -->
+<p></p>
+<p>Selanjutnya filter juga agar page yang terdapat di method GET tidak lebih dari jumlah halaman. </p>
+<p></p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa07b75a460276054" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div style="display: none;" class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">   if( $page&gt;$jumlah_hal ){
+      $page=$jumlah_hal;
+   }</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa07b75a460276054-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b75a460276054-2">2</div><div class="crayon-num" data-line="crayon-53800aa07b75a460276054-3">3</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa07b75a460276054-1"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-o">&gt;</span><span class="crayon-v">$jumlah_hal</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b75a460276054-2"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">$page</span><span class="crayon-o">=</span><span class="crayon-v">$jumlah_hal</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-53800aa07b75a460276054-3"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-sy">}</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0026 seconds] -->
+<p></p>
+<p>Kemudian kita dapat membuat sebuah variable $lanjut dan $sebelum dengan penentuan seperti ini:</p>
+<p></p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa07b76b159606215" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div style="display: none;" class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">   $lanjut  = $page + 1;
+   $sebelum = $page - 1;</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa07b76b159606215-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b76b159606215-2">2</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa07b76b159606215-1"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$lanjut</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b76b159606215-2"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$sebelum</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0033 seconds] -->
+<p></p>
+<p>Barulah kita membuat kata-kata seperti berikut dilengkapi dengan navigasi Paging:</p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa07b77c924908678" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">
+   Anda ada di halaman &lt;?php echo $page;?&gt; dari &lt;?php echo 
+$jumlah_hal;?&gt;&lt;br /&gt;
+   &lt;a 
+href="?page=1"&gt;&amp;lt;&amp;lt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a
+ href="?page=&lt;?php echo $sebelum; 
+?&gt;"&gt;&amp;lt;&amp;nbsp;sebelumnya&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+
+   ||
+   &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href="?page=&lt;?php echo 
+$lanjut;?&gt;"&gt;selanjutnya&amp;nbsp;&amp;gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a
+ href="?page=&lt;?php echo 
+$jumlah_hal;?&gt;"&gt;&amp;gt;&amp;gt;&lt;/a&gt;
+   Ke Halaman: &lt;form action="" method="get"&gt;&lt;input type="text" 
+name="page"&gt;&lt;input type="submit" value="Go"&gt;&lt;/form&gt;</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa07b77c924908678-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b77c924908678-2">2</div><div class="crayon-num" data-line="crayon-53800aa07b77c924908678-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b77c924908678-4">4</div><div class="crayon-num" data-line="crayon-53800aa07b77c924908678-5">5</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa07b77c924908678-1"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-e">Anda</span><span class="crayon-h"> </span><span class="crayon-e">ada</span><span class="crayon-h"> </span><span class="crayon-e">di</span><span class="crayon-h"> </span><span class="crayon-e">halaman</span><span class="crayon-h"> </span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span><span class="crayon-h"> </span><span class="crayon-e">dari</span><span class="crayon-h"> </span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$jumlah_hal</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-i">br</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b77c924908678-2"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">&lt;</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">href</span><span class="crayon-o">=</span><span class="crayon-s">"?page=1"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">lt</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">lt</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-i">a</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">href</span><span class="crayon-o">=</span><span class="crayon-s">"?page=<span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$sebelum</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-ta">?&gt;</span>"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">lt</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-i">sebelumnya</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-i">a</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-53800aa07b77c924908678-3"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">||</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b77c924908678-4"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">href</span><span class="crayon-o">=</span><span class="crayon-s">"?page=<span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$lanjut</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span>"</span><span class="crayon-o">&gt;</span><span class="crayon-i">selanjutnya</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">gt</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-i">a</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">href</span><span class="crayon-o">=</span><span class="crayon-s">"?page=<span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$jumlah_hal</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span>"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">gt</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">gt</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-i">a</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-53800aa07b77c924908678-5"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-e">Ke </span><span class="crayon-i">Halaman</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">form </span><span class="crayon-i">action</span><span class="crayon-o">=</span><span class="crayon-s">""</span><span class="crayon-h"> </span><span class="crayon-i">method</span><span class="crayon-o">=</span><span class="crayon-s">"get"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">input </span><span class="crayon-i">type</span><span class="crayon-o">=</span><span class="crayon-s">"text"</span><span class="crayon-h"> </span><span class="crayon-i">name</span><span class="crayon-o">=</span><span class="crayon-s">"page"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">input </span><span class="crayon-i">type</span><span class="crayon-o">=</span><span class="crayon-s">"submit"</span><span class="crayon-h"> </span><span class="crayon-i">value</span><span class="crayon-o">=</span><span class="crayon-s">"Go"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-i">form</span><span class="crayon-o">&gt;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0276 seconds] -->
+<p></p>
+<p>Tampilan sangat sederhana seperti berikut :<br>
+</p>
+<div style="border:solid 1px #ccc; padding:30px; background:555; width:300px;">
+Anda ada di halaman 3 dari 3<br>
+&lt;&lt;    &lt; sebelumnya || sesudahnya &gt;    &gt;&gt;<br>
+Ke Halaman <input type="text"><input value="Go To" type="submit"><p></p>
+</div>
+<p>Sederhana bukan? </p>
+<p>Secara lengkap Code akan dipaparkan dalam bentuk fungsi, sehingga 
+untuk penomoran halaman tinggal memanggil melalui fungsi seperti 
+demikian </p>
+<p></p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa07b795057446484" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div style="display: none;" class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px ! important; line-height: 18.2px ! important; margin-top: -19px; display: none;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">$sql = "select * from table";
+$item_per_page =10;
+paging($sql, $item_per_page);</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa07b795057446484-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b795057446484-2">2</div><div class="crayon-num" data-line="crayon-53800aa07b795057446484-3">3</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa07b795057446484-1"><span class="crayon-v">$sql</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">"select * from table"</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b795057446484-2"><span class="crayon-v">$item_per_page</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-cn">10</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-53800aa07b795057446484-3"><span class="crayon-e">paging</span><span class="crayon-sy">(</span><span class="crayon-v">$sql</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">$item_per_page</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0030 seconds] -->
+<p></p>
+<h1>FUNGSI UTAMA PAGING SIMPLE</h1>
+<p>Fungsinya adalah sebagai berikut di bawah (saya beri nama dengan 
+paging.php). Anda dapat kopikan fungsi ini ke dalam kode anda, dan anda 
+panggil ketika anda akan memberikan penomoran halaman. Anda juga dapat 
+melakukan modifikasi sendiri sesuka hati:</p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa07b7a7539072199" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: auto;">&lt;?php
+function
+ paging($sql,$item_per_page){
+   $page          =  isset($_GET['page']) ? $_GET['page'] : 1 ; // 
+halaman adalah didapat dari GET page. Jika tidak ada ya berarti halaman 
+satu
+   if( ( $page &lt; 1) &amp;&amp; (empty( $page ) ) ){
+      $page=1; 
+   }
+   $query         = mysql_query( $sql );
+   $jumlah_data   = mysql_num_rows($query);
+   $jumlah_hal    = ceil( $jumlah_data/$item_per_page );
+   if( $page&gt;$jumlah_hal ){
+      $page=$jumlah_hal;
+   }
+   $lanjut  = $page + 1;
+   $sebelum = $page - 1;
+   ?&gt;
+   Anda ada di halaman &lt;?php echo $page;?&gt; dari &lt;?php echo 
+$jumlah_hal;?&gt;&lt;br /&gt;
+   &lt;a 
+href="?page=1"&gt;&amp;lt;&amp;lt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a
+ href="?page=&lt;?php echo $sebelum; 
+?&gt;"&gt;&amp;lt;&amp;nbsp;sebelumnya&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+
+   ||
+   &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href="?page=&lt;?php echo 
+$lanjut;?&gt;"&gt;selanjutnya&amp;nbsp;&amp;gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a
+ href="?page=&lt;?php echo 
+$jumlah_hal;?&gt;"&gt;&amp;gt;&amp;gt;&lt;/a&gt;
+   Ke Halaman: &lt;form action="" method="get"&gt;&lt;input type="text" 
+name="page"&gt;&lt;input type="submit" value="Go"&gt;&lt;/form&gt;
+   &lt;?php 
+} 
+?&gt;</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: auto;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-2">2</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-4">4</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-6">6</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-8">8</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-10">10</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-12">12</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-14">14</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-16">16</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-18">18</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-20">20</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7a7539072199-22">22</div><div class="crayon-num" data-line="crayon-53800aa07b7a7539072199-23">23</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa07b7a7539072199-1"><span class="crayon-ta">&lt;?php</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-2"><span class="crayon-t">function</span><span class="crayon-h"> </span><span class="crayon-e">paging</span><span class="crayon-sy">(</span><span class="crayon-v">$sql</span><span class="crayon-sy">,</span><span class="crayon-v">$item_per_page</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-3"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$page</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-k ">isset</span><span class="crayon-sy">(</span><span class="crayon-v">$_GET</span><span class="crayon-sy">[</span><span class="crayon-s">'page'</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">?</span><span class="crayon-h"> </span><span class="crayon-v">$_GET</span><span class="crayon-sy">[</span><span class="crayon-s">'page'</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-c">// halaman adalah didapat dari GET page. Jika tidak ada ya berarti halaman satu</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-4"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">&amp;&amp;</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-k ">empty</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">$page</span><span class="crayon-o">=</span><span class="crayon-cn">1</span><span class="crayon-sy">;</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-6"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-7"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$query</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">mysql_query</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$sql</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-8"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$jumlah_data</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">mysql_num_rows</span><span class="crayon-sy">(</span><span class="crayon-v">$query</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-9"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$jumlah_hal</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">ceil</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$jumlah_data</span><span class="crayon-o">/</span><span class="crayon-v">$item_per_page</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-10"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-st">if</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-o">&gt;</span><span class="crayon-v">$jumlah_hal</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">$page</span><span class="crayon-o">=</span><span class="crayon-v">$jumlah_hal</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-12"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-13"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$lanjut</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-14"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-v">$sebelum</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-15"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-ta">?&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-16"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-e">Anda</span><span class="crayon-h"> </span><span class="crayon-e">ada</span><span class="crayon-h"> </span><span class="crayon-e">di</span><span class="crayon-h"> </span><span class="crayon-e">halaman</span><span class="crayon-h"> </span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$page</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span><span class="crayon-h"> </span><span class="crayon-e">dari</span><span class="crayon-h"> </span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$jumlah_hal</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-i">br</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-17"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">&lt;</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">href</span><span class="crayon-o">=</span><span class="crayon-s">"?page=1"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">lt</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">lt</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-i">a</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">href</span><span class="crayon-o">=</span><span class="crayon-s">"?page=<span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$sebelum</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-ta">?&gt;</span>"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">lt</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-i">sebelumnya</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-i">a</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-18"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">||</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-19"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">href</span><span class="crayon-o">=</span><span class="crayon-s">"?page=<span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$lanjut</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span>"</span><span class="crayon-o">&gt;</span><span class="crayon-i">selanjutnya</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">gt</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-i">a</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">nbsp</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">href</span><span class="crayon-o">=</span><span class="crayon-s">"?page=<span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$jumlah_hal</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span>"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-i">gt</span><span class="crayon-sy">;</span><span class="crayon-o">&amp;</span><span class="crayon-i">gt</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-i">a</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-20"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-e">Ke </span><span class="crayon-i">Halaman</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">form </span><span class="crayon-i">action</span><span class="crayon-o">=</span><span class="crayon-s">""</span><span class="crayon-h"> </span><span class="crayon-i">method</span><span class="crayon-o">=</span><span class="crayon-s">"get"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">input </span><span class="crayon-i">type</span><span class="crayon-o">=</span><span class="crayon-s">"text"</span><span class="crayon-h"> </span><span class="crayon-i">name</span><span class="crayon-o">=</span><span class="crayon-s">"page"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">input </span><span class="crayon-i">type</span><span class="crayon-o">=</span><span class="crayon-s">"submit"</span><span class="crayon-h"> </span><span class="crayon-i">value</span><span class="crayon-o">=</span><span class="crayon-s">"Go"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">form</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-21"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7a7539072199-22"><span class="crayon-sy">}</span><span class="crayon-h"> </span></div><div class="crayon-line" id="crayon-53800aa07b7a7539072199-23"><span class="crayon-ta">?&gt;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0441 seconds] -->
+<p></p>
+<p>
+Selanjutnya contoh perhalamannya akan seperti berikut:</p>
+<p></p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa07b7ba484130748" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;NIP&lt;/th&gt;&lt;th&gt;Nama&lt;/th&gt;&lt;th&gt;HONOR&lt;/th&gt;&lt;th&gt;Status
+ Ambil&lt;/th&gt;&lt;/tr&gt;
+&lt;?php
+include "paging.php";
+$sql = "SELECT * FROM `pegawai`";
+$item_per_page = 2;
+paging( $sql,$item_per_page );
+
+$batas = ($page - 1) * $item_per_page;
+$sql_ = "SELECT * FROM `pegawai` ORDER BY `nip` DESC LIMIT $batas, 
+$item_per_page";
+$query_ = mysql_query( $sql_ );
+while( $ret = mysql_fetch_array( $query_ ) ){
+
+?&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;?php echo $ret['nip'];?&gt;&lt;/td&gt;
+&lt;td&gt;&lt;?php echo $ret['nama'];?&gt;&lt;/td&gt;
+&lt;td&gt;&lt;?php echo $ret['honor'];?&gt;&lt;/td&gt;
+&lt;td&gt;&lt;?php echo $ret['status_ambil'];?&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;?php
+
+}
+?&gt;</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-2">2</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-4">4</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-6">6</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-8">8</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-10">10</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-12">12</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-14">14</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-16">16</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-18">18</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-20">20</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-22">22</div><div class="crayon-num" data-line="crayon-53800aa07b7ba484130748-23">23</div><div class="crayon-num crayon-striped-num" data-line="crayon-53800aa07b7ba484130748-24">24</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa07b7ba484130748-1"><span class="crayon-o">&lt;</span><span class="crayon-e">table</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-2"><span class="crayon-o">&lt;</span><span class="crayon-e">tr</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">th</span><span class="crayon-o">&gt;</span><span class="crayon-e">NIP</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">th</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">th</span><span class="crayon-o">&gt;</span><span class="crayon-e">Nama</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">th</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">th</span><span class="crayon-o">&gt;</span><span class="crayon-e">HONOR</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">th</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">th</span><span class="crayon-o">&gt;</span><span class="crayon-e">Status</span><span class="crayon-h"> </span><span class="crayon-e">Ambil</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">th</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">tr</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-3"><span class="crayon-ta">&lt;?php</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-4"><span class="crayon-k ">include</span><span class="crayon-h"> </span><span class="crayon-s">"paging.php"</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-5"><span class="crayon-v">$sql</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">"SELECT * FROM `pegawai`"</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-6"><span class="crayon-v">$item_per_page</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-7"><span class="crayon-e">paging</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$sql</span><span class="crayon-sy">,</span><span class="crayon-v">$item_per_page</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-8">&nbsp;</div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-9"><span class="crayon-v">$batas</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-v">$item_per_page</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-10"><span class="crayon-v">$sql_</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">"SELECT * FROM `pegawai` ORDER BY `nip` DESC LIMIT $batas, $item_per_page"</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-11"><span class="crayon-v">$query_</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">mysql_query</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$sql_</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-12"><span class="crayon-st">while</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$ret</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">mysql_fetch_array</span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-v">$query_</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-13">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-14"><span class="crayon-ta">?&gt;</span></div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-15"><span class="crayon-o">&lt;</span><span class="crayon-e">tr</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-16"><span class="crayon-o">&lt;</span><span class="crayon-e">td</span><span class="crayon-o">&gt;</span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$ret</span><span class="crayon-sy">[</span><span class="crayon-s">'nip'</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">td</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-17"><span class="crayon-o">&lt;</span><span class="crayon-e">td</span><span class="crayon-o">&gt;</span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$ret</span><span class="crayon-sy">[</span><span class="crayon-s">'nama'</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">td</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-18"><span class="crayon-o">&lt;</span><span class="crayon-e">td</span><span class="crayon-o">&gt;</span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$ret</span><span class="crayon-sy">[</span><span class="crayon-s">'honor'</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">td</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-19"><span class="crayon-o">&lt;</span><span class="crayon-e">td</span><span class="crayon-o">&gt;</span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-v">$ret</span><span class="crayon-sy">[</span><span class="crayon-s">'status_ambil'</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">td</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-20"><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-e">tr</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-21"><span class="crayon-ta">&lt;?php</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-22">&nbsp;</div><div class="crayon-line" id="crayon-53800aa07b7ba484130748-23"><span class="crayon-sy">}</span></div><div class="crayon-line crayon-striped-line" id="crayon-53800aa07b7ba484130748-24"><span class="crayon-ta">?&gt;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0241 seconds] -->
+<p></p>
+<p>Mudah bukan? Semoga bermanfaat</p>
+<div class="SPOSTARBUST-Related-Posts"><h3>Artikel terkait</h3><ul class="entry-meta"><li class="SPOSTARBUST-Related-Post"><a original-title="[Contoh] Cara Membuat Grafik Multi Line / Banyak Garis dengan PHP, MySQL, dan JQuery HighChart" href="http://bimosaurus.com/2012/05/03/contoh-cara-membuat-grafik-multi-line-banyak-garis-dengan-php-mysql-dan-jquery-highchart/" rel="bookmark">[Contoh] Cara Membuat Grafik Multi Line / Banyak Garis dengan PHP, MySQL, dan JQuery HighChart</a></li>
+<li class="SPOSTARBUST-Related-Post"><a original-title="[Contoh] Cara Cepat Mengubah Parameter method GET POST menjadi variable" href="http://bimosaurus.com/2012/05/04/contoh-cara-cepat-mengubah-parameter-method-get-post-menjadi-variable/" rel="bookmark">[Contoh] Cara Cepat Mengubah Parameter method GET POST menjadi variable</a></li>
+<li class="SPOSTARBUST-Related-Post"><a original-title="[Contoh] PHP, MySQL, JQuery Form Posting, Tanpa Autorefresh Halaman / Pindah Halaman" href="http://bimosaurus.com/2013/02/14/contoh-php-mysql-jquery-form-posting-tanpa-autorefresh-halaman-pindah-halaman/" rel="bookmark">[Contoh] PHP, MySQL, JQuery Form Posting, Tanpa Autorefresh Halaman / Pindah Halaman</a></li>
+<li class="SPOSTARBUST-Related-Post"><a original-title="[Contoh] Cara Sederhana Membuat Image Gambar dengan PHP" href="http://bimosaurus.com/2012/05/08/contoh-cara-sederhana-membuat-image-gambar-dengan-php/" rel="bookmark">[Contoh] Cara Sederhana Membuat Image Gambar dengan PHP</a></li>
+<li class="SPOSTARBUST-Related-Post"><a original-title="Contoh Cara Membuat Sendiri Site Tracker Sederhana" href="http://bimosaurus.com/2012/04/23/contoh-cara-membuat-sendiri-site-tracker-sederhana/" rel="bookmark">Contoh Cara Membuat Sendiri Site Tracker Sederhana</a></li>
+<li class="SPOSTARBUST-Related-Post"><a original-title="[Tips] Membaca Metadata Image JPEG/TIFF dengan PHP" href="http://bimosaurus.com/2012/05/22/tips-membaca-metadata-image-jpegtiff-dengan-php/" rel="bookmark">[Tips] Membaca Metadata Image JPEG/TIFF dengan PHP</a></li>
+<li class="SPOSTARBUST-Related-Post"><a original-title="[TIPS] Pesan ERROR “cannot modify header information – headers already sent by”" href="http://bimosaurus.com/2012/04/21/tips-pesan-error-cannot-modify-header-information-headers-already-sent-by/" rel="bookmark">[TIPS] Pesan ERROR “cannot modify header information – headers already sent by”</a></li>
+<li class="SPOSTARBUST-Related-Post"><a original-title="Berkreasi dengan Peta HTML dan tag Map Area [Bagian 2]" href="http://bimosaurus.com/2013/03/16/berkreasi-dengan-peta-html-dan-tag-map-area-bagian-2/" rel="bookmark">Berkreasi dengan Peta HTML dan tag Map Area [Bagian 2]</a></li>
+</ul></div>
+												
+					</div><!-- .entry-content -->
+					
+					<div class="entry-utility">
+
+						<span class="cat-links">This entry was posted in <a original-title="View all posts in HTML" href="http://bimosaurus.com/category/html/" rel="category tag">HTML</a>, <a original-title="View all posts in MySQL" href="http://bimosaurus.com/category/mysql/" rel="category tag">MySQL</a>, <a original-title="View all posts in PHP" href="http://bimosaurus.com/category/php/" rel="category tag">PHP</a></span><span class="tag-links">  and tagged <a href="http://bimosaurus.com/tag/halaman/" rel="tag">halaman</a>, <a href="http://bimosaurus.com/tag/mysql-2/" rel="tag">mysql</a>, <a href="http://bimosaurus.com/tag/nomor/" rel="tag">nomor</a>, <a href="http://bimosaurus.com/tag/page/" rel="tag">page</a>, <a href="http://bimosaurus.com/tag/paging/" rel="tag">paging</a>, <a href="http://bimosaurus.com/tag/php-2/" rel="tag">php</a>, <a href="http://bimosaurus.com/tag/sederhana/" rel="tag">sederhana</a>, <a href="http://bimosaurus.com/tag/simple/" rel="tag">simple</a></span>. Bookmark the <a original-title="Permalink to [Contoh] Super Simple Paging Halaman PHP MySQL" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/">permalink</a>.  <a original-title="Post a comment" class="comment-link" href="#respond">Post a comment</a> or leave a trackback: <a original-title="Trackback URL for your post" class="trackback-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/trackback/" rel="trackback">Trackback URL</a>.
+
+					</div><!-- .entry-utility -->
+					
+				</div><!-- #post -->
+		
+			<div id="nav-below" class="navigation">
+				<div class="nav-previous"><a href="http://bimosaurus.com/2012/04/28/contoh-cara-membuat-grafik-dasar-web-dengan-jquery-highchart/" rel="prev"><span class="meta-nav">«</span> [Contoh] Cara Membuat Grafik Dasar Web Dengan JQuery HighChart</a></div>
+				<div class="nav-next"><a href="http://bimosaurus.com/2012/05/03/hacking-database-kosong-tak-berpassword-berbahayakah/" rel="next">[Hacking] Database kosong tak Berpassword, berbahayakah? <span class="meta-nav">»</span></a></div>
+			</div>
+
+								
+				<div id="comments">
+	
+					
+					
+										
+												
+					
+											
+					<div id="comments-list-wrapper" class="comments">
+
+						<h3><span>20</span> Comments</h3>
+	
+						<ol id="comments-list">
+							    
+       	<li id="comment-241" class="comment even thread-even depth-1 thm-c-y2012 thm-c-m05 thm-c-d22 thm-c-h15">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/970beaec64a00f0172c19fc692e204f3.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n">Rian Husen</span></div>
+    		
+    			<div class="comment-meta">Posted May 22, 2012 at 8:31 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-241">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>mf hanya komentar dikit dan ngasih masukan… yg diatas kurang koding nya dikit… </p>
+<p>$page          =  isset($_GET['page']) ? $_GET['page'] : 1 ;<br>
+tidak ada di contoh soal.. </p>
+<p>terimakasih…</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=241#respond" onclick='return addComment.moveForm("comment-241", "241", "respond", "225")'>Reply</a></div>			
+			
+<ul class="children">
+    
+       	<li id="comment-245" class="comment byuser comment-author-bimosaurus bypostauthor odd alt depth-2 thm-c-y2012 thm-c-m05 thm-c-d22 thm-c-h17">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/224e59af9779a47a3c3e426cba5454d1.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://bimosaurus.com/" rel="external nofollow" class="url url">bimosaurus</a></span></div>
+    		
+    			<div class="comment-meta">Posted May 22, 2012 at 10:32 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-245">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>Terimakasih masukannya, namun pada contoh diatas memang bagian :</p><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		<div id="crayon-53800aa0ca122989871021" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div style="display: none;" class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">PHP</span></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">$page = isset($_GET['page']) ? $_GET['page'] : 1 ;</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa0ca122989871021-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa0ca122989871021-1"><span class="crayon-v">$page</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">isset</span><span class="crayon-sy">(</span><span class="crayon-v">$_GET</span><span class="crayon-sy">[</span><span class="crayon-s">'page'</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">?</span><span class="crayon-h"> </span><span class="crayon-v">$_GET</span><span class="crayon-sy">[</span><span class="crayon-s">'page'</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0033 seconds] -->
+<p></p>
+<p>sudah dimasukkan dalam script paging.php. Mohon koreksinya kembali. CMIIW <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=245#respond" onclick='return addComment.moveForm("comment-245", "245", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    
+       	<li id="comment-618" class="comment even thread-odd thread-alt depth-1 thm-c-y2012 thm-c-m07 thm-c-d17 thm-c-h13">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/0cb66741330815dedefdf20dfa16a0af.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://hendryflame666.blogspot.com/" rel="external nofollow" class="url url">Hendry</a></span></div>
+    		
+    			<div class="comment-meta">Posted July 17, 2012 at 6:22 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-618">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>bagus nih gan trims nya …..</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=618#respond" onclick='return addComment.moveForm("comment-618", "618", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+    
+       	<li id="comment-1525" class="comment odd alt thread-even depth-1 thm-c-y2012 thm-c-m09 thm-c-d18 thm-c-h15">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/8e79106443f26e10820a4128aec3e1c8.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://drakenzull.co.nr/" rel="external nofollow" class="url url">drakenzull</a></span></div>
+    		
+    			<div class="comment-meta">Posted September 18, 2012 at 8:45 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-1525">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>wew thnks ya,…</p>
+<p>izin save page untuk referensi <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_razz.gif" alt=":P" class="wp-smiley"> </p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=1525#respond" onclick='return addComment.moveForm("comment-1525", "1525", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+    
+       	<li id="comment-1552" class="comment even thread-odd thread-alt depth-1 thm-c-y2012 thm-c-m09 thm-c-d26 thm-c-h13">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/dec0fed5eaf8c40500f8706c2a714bf0.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://www.facebook.com/blackbeltandre" rel="external nofollow" class="url url">Andre</a></span></div>
+    		
+    			<div class="comment-meta">Posted September 26, 2012 at 6:03 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-1552">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>Tx <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_smile.gif" alt=":)" class="wp-smiley"><br>
+tapi stresss sangat nii senior<br>
+wowwww lh pokoknya <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=1552#respond" onclick='return addComment.moveForm("comment-1552", "1552", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+    
+       	<li id="comment-1781" class="comment odd alt thread-even depth-1 thm-c-y2012 thm-c-m11 thm-c-d24 thm-c-h12">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/636f331548fb1e4b9675b05cad79b6db.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://sultan.zz.mu/" rel="external nofollow" class="url url">Andi</a></span></div>
+    		
+    			<div class="comment-meta">Posted November 24, 2012 at 5:56 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-1781">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>Mantap gan thanks banget kode.y AJIP..</p>
+<p>Jadi simple bikin halaman webnya..</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=1781#respond" onclick='return addComment.moveForm("comment-1781", "1781", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+    
+       	<li id="comment-1845" class="comment even thread-odd thread-alt depth-1 thm-c-y2013 thm-c-m02 thm-c-d27 thm-c-h11">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/22da86df040e0723cee5d858461e5801.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n">ayu</span></div>
+    		
+    			<div class="comment-meta">Posted February 27, 2013 at 4:10 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-1845">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>bagus nih trims</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=1845#respond" onclick='return addComment.moveForm("comment-1845", "1845", "respond", "225")'>Reply</a></div>			
+			
+<ul class="children">
+    
+       	<li id="comment-1846" class="comment byuser comment-author-bimosaurus bypostauthor odd alt depth-2 thm-c-y2013 thm-c-m02 thm-c-d27 thm-c-h12">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/224e59af9779a47a3c3e426cba5454d1.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://bimosaurus.com/" rel="external nofollow" class="url url">bimosaurus</a></span></div>
+    		
+    			<div class="comment-meta">Posted February 27, 2013 at 5:59 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-1846">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>Sama sama mbak.. sekedar memcatat agar gak lupa <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_biggrin.gif" alt=":D" class="wp-smiley"> </p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=1846#respond" onclick='return addComment.moveForm("comment-1846", "1846", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    
+       	<li id="comment-2234" class="comment even thread-even depth-1 thm-c-y2013 thm-c-m04 thm-c-d17 thm-c-h21">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/4ce5caac049293f19db8a414b7aa9641.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://fakhrialfattaah.blogspot.com/" rel="external nofollow" class="url url">fakhri10</a></span></div>
+    		
+    			<div class="comment-meta">Posted April 17, 2013 at 2:20 pm <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-2234">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>trim’s banget infonya gan….<br>
+berkunjung ke blog ane<br>
+salam kenal<br>
+ <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_biggrin.gif" alt=":D" class="wp-smiley"> </p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=2234#respond" onclick='return addComment.moveForm("comment-2234", "2234", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+    
+       	<li id="comment-2348" class="comment odd alt thread-odd thread-alt depth-1 thm-c-y2013 thm-c-m04 thm-c-d24 thm-c-h23">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/c5aa08a7ff91dfdd0857ef85f188e50f.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://blog.spesial.info/" rel="external nofollow" class="url url">abuibrahim11</a></span></div>
+    		
+    			<div class="comment-meta">Posted April 24, 2013 at 4:46 pm <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-2348">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>Mantaab gan… tengkiyu..</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=2348#respond" onclick='return addComment.moveForm("comment-2348", "2348", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+    
+       	<li id="comment-2702" class="comment even thread-even depth-1 thm-c-y2013 thm-c-m06 thm-c-d07 thm-c-h06">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/56ee9e0cb623dca9dd97b7586e9a6c5c.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n">jamal</span></div>
+    		
+    			<div class="comment-meta">Posted June 6, 2013 at 11:43 pm <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-2702">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>terimakasih banyak, tulisan-tulisanya sangat bermanfaat sekali…</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=2702#respond" onclick='return addComment.moveForm("comment-2702", "2702", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+    
+       	<li id="comment-2731" class="comment odd alt thread-odd thread-alt depth-1 thm-c-y2013 thm-c-m06 thm-c-d11 thm-c-h05">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/51a7ce67ee936d0efa48fcfcf3e242ee.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://www.ngrambe.net/" rel="external nofollow" class="url url">Ngrambe Ngawi Jawa Timur</a></span></div>
+    		
+    			<div class="comment-meta">Posted June 10, 2013 at 10:11 pm <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-2731">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>Masih gagal… lanjut ke sebelah… <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_smile.gif" alt=":)" class="wp-smiley">  sekedar ninggalin jejak <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_biggrin.gif" alt=":D" class="wp-smiley"> </p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=2731#respond" onclick='return addComment.moveForm("comment-2731", "2731", "respond", "225")'>Reply</a></div>			
+			
+<ul class="children">
+    
+       	<li id="comment-2738" class="comment byuser comment-author-bimosaurus bypostauthor even depth-2 thm-c-y2013 thm-c-m06 thm-c-d11 thm-c-h16">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/224e59af9779a47a3c3e426cba5454d1.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://bimosaurus.com/" rel="external nofollow" class="url url">bimosaurus</a></span></div>
+    		
+    			<div class="comment-meta">Posted June 11, 2013 at 9:48 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-2738">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>Sesama keturunan Ngrambe wajib berteman.. <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_biggrin.gif" alt=":D" class="wp-smiley"> </p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=2738#respond" onclick='return addComment.moveForm("comment-2738", "2738", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    
+       	<li id="comment-2895" class="comment odd alt thread-even depth-1 thm-c-y2013 thm-c-m07 thm-c-d02 thm-c-h20">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/10cdbf4d5d0bb2001fa2c17042b58475.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://everything-icha.blogspot.com/" rel="external nofollow" class="url url">icha</a></span></div>
+    		
+    			<div class="comment-meta">Posted July 2, 2013 at 1:31 pm <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-2895">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>tengkyu.. membantu sekali..</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=2895#respond" onclick='return addComment.moveForm("comment-2895", "2895", "respond", "225")'>Reply</a></div>			
+			
+<ul class="children">
+    
+       	<li id="comment-2921" class="comment byuser comment-author-bimosaurus bypostauthor even depth-2 thm-c-y2013 thm-c-m07 thm-c-d06 thm-c-h00">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/224e59af9779a47a3c3e426cba5454d1.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://bimosaurus.com/" rel="external nofollow" class="url url">bimosaurus</a></span></div>
+    		
+    			<div class="comment-meta">Posted July 5, 2013 at 5:51 pm <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-2921">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>semoga bisa disebarkan lanjut ya <img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=2921#respond" onclick='return addComment.moveForm("comment-2921", "2921", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    
+       	<li id="comment-3045" class="comment odd alt thread-odd thread-alt depth-1 thm-c-y2013 thm-c-m07 thm-c-d18 thm-c-h21">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/3326fa6dd779f6fa4dd919a053678348.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://www.jalanallah.com/" rel="external nofollow" class="url url">raco</a></span></div>
+    		
+    			<div class="comment-meta">Posted July 18, 2013 at 2:15 pm <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-3045">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>dihalaman tampilnya tambah ini broo kalo nggak nanti error pas dihalaman satu klik sebelumnya trus muncul error</p>
+<p>$page = isset($_GET['page']) ? $_GET['page'] : 1 ;<br>
+if( ( $page &lt; 1) &amp;&amp; (empty( $page ) ) ){<br>
+      $page=1;<br>
+   }</p>
+<p>$item_per_page = 20;<br>
+paging( $sql,$item_per_page );<br>
+$batas = ($page – 1) * $item_per_page;</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=3045#respond" onclick='return addComment.moveForm("comment-3045", "3045", "respond", "225")'>Reply</a></div>			
+			
+<ul class="children">
+    
+       	<li id="comment-3098" class="comment byuser comment-author-bimosaurus bypostauthor even depth-2 thm-c-y2013 thm-c-m07 thm-c-d22 thm-c-h17">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/224e59af9779a47a3c3e426cba5454d1.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n"><a href="http://bimosaurus.com/" rel="external nofollow" class="url url">bimosaurus</a></span></div>
+    		
+    			<div class="comment-meta">Posted July 22, 2013 at 10:01 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-3098">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>maaf atas keterlambatan jawaban, karena on project luar kota.<br>
+Mas, coba pastikan bahwa tag <!--?php selalu ada<br /-->
+Yang berikutnya jika masih error, pada baris atas setelah tag <!--?php, tuliskan saja :</p--><!-- Crayon Syntax Highlighter v2.4.1 -->
+
+		</p><div id="crayon-53800aa0c8c84583085440" class="crayon-syntax crayon-theme-neon crayon-font-courier-new crayon-os-pc print-yes" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; float: none; clear: both; font-size: 13px ! important; line-height: 20px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div style="display: none;" class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="off" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 13px ! important; line-height: 20px ! important; z-index: 0; opacity: 0; overflow: hidden;">ini_set('register_globals','on');</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-53800aa0c8c84583085440-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 20px !important;"><div class="crayon-line" id="crayon-53800aa0c8c84583085440-1"><span class="crayon-e">ini_set</span><span class="crayon-sy">(</span><span class="crayon-s">'register_globals'</span><span class="crayon-sy">,</span><span class="crayon-s">'on'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0015 seconds] -->
+<p></p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=3098#respond" onclick='return addComment.moveForm("comment-3098", "3098", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    
+       	<li id="comment-3111" class="comment odd alt thread-even depth-1 thm-c-y2013 thm-c-m07 thm-c-d23 thm-c-h04">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/f2179ad5c6548c5ebdf5f49e198a14c6.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n">Brian</span></div>
+    		
+    			<div class="comment-meta">Posted July 22, 2013 at 9:56 pm <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-3111">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>Gan itu $sql smuanya kurang ‘$sql_’ pas manggil functionya….btw thanks codingnya berguna bgt</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=3111#respond" onclick='return addComment.moveForm("comment-3111", "3111", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+    
+       	<li id="comment-3854" class="comment even thread-odd thread-alt depth-1 thm-c-y2013 thm-c-m09 thm-c-d17 thm-c-h00">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/b1be3199f16f02776a2cdc4ecf5c7110.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n">Azwar</span></div>
+    		
+    			<div class="comment-meta">Posted September 16, 2013 at 5:05 pm <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-3854">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>Mas saya punya skrip untuk menampilkan data User seperti di
+ bawah ini, kalo mau di kasih fungsi paging kaya di atas gimana ya 
+caranya. Mohon bantuannya soalnya saya baru belajar. </p>
+<p>&lt;?php<br>
+echo "User</p>
+<p>NoIDUsernameAksi”;</p>
+<p>include “../config/koneksi.php”;<br>
+$tampil=mysql_query(“SELECT * FROM admin ORDER BY id_admin”);<br>
+$no=1;<br>
+while ($r=mysql_fetch_array($tampil)){<br>
+	echo “$no<br>
+		  $r[id_admin]<br>
+		  $r[username]<br>
+		  <a href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/edit_user.php?id=$r[id_admin]" rel="nofollow">Edit</a><br>
+		  	  <a href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/hapus_user.php?id=$r[id_admin]" rel="nofollow">Hapus</a><br>
+		  “;<br>
+		  $no++;<br>
+		 }<br>
+		 echo “”;<br>
+		 ?&gt;</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=3854#respond" onclick='return addComment.moveForm("comment-3854", "3854", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+    
+       	<li id="comment-7139" class="comment odd alt thread-even depth-1 thm-c-y2014 thm-c-m04 thm-c-d04 thm-c-h13">
+    	
+    		    		
+    		<div class="comment-author vcard"><img alt="" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/2eba015f2a0b934b4b7bab506a865618.png" class="photo avatar avatar-80 photo" height="80" width="80"> <span class="fn n">Kharistiyan</span></div>
+    		
+    			<div class="comment-meta">Posted April 4, 2014 at 6:30 am <span class="meta-sep">|</span> <a original-title="Permalink to this comment" href="#comment-7139">Permalink</a></div>
+    		
+    			    			
+            <div class="comment-content">
+            
+        		<p>work!!! makasih master….</p>
+        		
+    		</div>
+    		
+			<div class="comment-reply-link"><a class="comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/?replytocom=7139#respond" onclick='return addComment.moveForm("comment-7139", "7139", "respond", "225")'>Reply</a></div>			
+			
+</li><!-- #comment-## -->
+						</ol>
+										
+					</div><!-- #comments-list-wrapper .comments -->
+					
+												
+										
+										
+					<div id="comments-nav-below" class="comment-navigation">
+	        		
+	        			<div class="paginated-comments-links"></div>
+	                
+	                </div>	
+	                	                  
+					
+											
+						
+					<div id="respond">
+					
+	    				<h3>Post a Comment</h3>
+	
+	    				<div id="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/#respond" style="display: none;">Click here to cancel reply.</a></div>
+	
+												<div class="formcontainer">	
+	
+												
+	
+							<form id="commentform" action="http://bimosaurus.com/wp-comments-post.php" method="post">
+	
+								
+								<p id="comment-notes">Your email is <em>never</em> published nor shared. Required fields are marked <span class="required">*</span></p>
+	
+	                            <div id="form-section-author" class="form-section">
+	    							<div class="form-label"><label for="author">Name</label> <span class="required">*</span></div>
+	    							<div class="form-input"><input id="author" name="author" size="30" maxlength="20" tabindex="3" type="text"></div>
+	                            </div><!-- #form-section-author .form-section -->
+	
+	                            <div id="form-section-email" class="form-section">
+	    							<div class="form-label"><label for="email">Email</label> <span class="required">*</span></div>
+	    							<div class="form-input"><input id="email" name="email" size="30" maxlength="50" tabindex="4" type="text"></div>
+	                            </div><!-- #form-section-email .form-section -->
+	
+	                            <div id="form-section-url" class="form-section">
+	    							<div class="form-label"><label for="url">Website</label></div>
+	    							<div class="form-input"><input id="url" name="url" size="30" maxlength="50" tabindex="5" type="text"></div>
+	                            </div><!-- #form-section-url .form-section -->
+	
+								
+	                            <div id="form-section-comment" class="form-section">
+	    							<div class="form-label"><label for="comment">Comment</label></div>
+	    							<div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
+	                            </div><!-- #form-section-comment .form-section -->
+	                            
+	                            <div id="form-allowed-tags" class="form-section">
+	                                <p><span>You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:</span> <code>&lt;a
+ href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; 
+&lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code class="" 
+title="" data-url=""&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; 
+&lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; &lt;pre class="" 
+title="" data-url=""&gt; &lt;span class="" title="" data-url=""&gt; </code></p>
+	                            </div>
+								
+	                  			<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="d9998a27ee" type="hidden"></p>	                  
+								<div class="form-submit"><input id="submit" name="submit" value="Post Comment" tabindex="7" type="submit"><input name="comment_post_ID" value="225" type="hidden"></div>
+	
+	                            <input name="comment_post_ID" value="225" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+    
+	
+							</form><!-- #commentform -->
+	
+								
+						</div><!-- .formcontainer -->
+							
+						</div><!-- #respond -->
+						
+							
+				</div><!-- #comments -->
+				
+						
+			</div><!-- #content -->
+			
+			 
+		</div><!-- #container -->
+		
+
+		<div id="primary" class="aside main-aside">
+
+			<ul class="xoxo">
+
+				<li id="text-7" class="widgetcontainer widget_text"><h3 class="widgettitle">Admin Status</h3>
+			<div class="textwidget">
+<center>
+<h4 style="color:#f30">Sorry, Admin on Project Deadline</h4>
+
+<img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/emoticon.gif">
+</center>
+
+Not Available until 31 July 2013</div>
+		</li><li id="search-3" class="widgetcontainer widget_search"><h3 class="widgettitle"><label for="s">Cari Artikel</label></h3>
+
+						<form id="searchform" method="get" action="http://bimosaurus.com/">
+
+							<div>
+								<input id="s" name="s" value="To search, type and hit enter" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" size="32" tabindex="1" type="text">
+
+								<input id="searchsubmit" name="searchsubmit" value="Search" tabindex="2" type="submit">
+							</div>
+
+						</form>
+
+					</li><li id="text-6" class="widgetcontainer widget_text">			<div class="textwidget"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-3417930903351402";
+/* sidebar */
+google_ad_slot = "9088004815";
+google_ad_width = 250;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:250px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:250px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="250" scrolling="no" width="250"></iframe></ins></ins></div>
+		</li><li id="text-8" class="widgetcontainer widget_text"><h3 class="widgettitle">Dimana saya?</h3>
+			<div class="textwidget"><script src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/js">
+</script><script src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/main.js" type="text/javascript"></script>
+
+<script>
+var myCenter=new google.maps.LatLng(-7.357955,109.900564);
+var marker;
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+marker=new google.maps.Marker({
+  position:myCenter,
+  animation:google.maps.Animation.BOUNCE
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<div id="googleMap" style="width: 200px; height: 200px; position: relative; background-color: rgb(229, 227, 223); overflow: hidden;"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; z-index: 200;"><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div></div><div style="position: absolute; left: 0px; top: 0px; width: 100%; z-index: 201;"><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -9px; top: -143px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -9px; top: 113px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -265px; top: -143px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -265px; top: 113px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 247px; top: -143px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 247px; top: 113px;"></div></div></div><div style="width: 22px; height: 40px; overflow: hidden; position: absolute; left: 89px; top: 41px; z-index: 100;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/spotlight-poi.png" style="position: absolute; left: 0px; top: 0px; width: 22px; height: 40px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div></div><div style="position: absolute; left: 0px; top: 0px; width: 100%; z-index: 202;"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"><div class="gmnoprint" style="width: 22px; height: 40px; overflow: hidden; position: absolute; opacity: 0.01; left: 89px; top: 60px; z-index: 100;"><img usemap="#gmimap0" draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/spotlight-poi.png" style="position: absolute; left: 0px; top: 0px; width: 22px; height: 40px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"><map id="gmimap0" name="gmimap0"><area style="cursor: pointer;" title="" shape="poly" coords="8,0,5,1,4,2,3,3,2,4,2,5,1,6,1,7,0,8,0,14,1,15,1,16,2,17,2,18,3,19,3,20,4,21,5,22,5,23,6,24,7,25,7,27,8,28,8,29,9,30,9,33,10,34,10,40,11,40,11,34,12,33,12,30,13,29,13,28,14,27,14,25,15,24,16,23,16,22,17,21,18,20,18,19,19,18,19,17,20,16,20,15,21,14,21,8,20,7,20,6,19,5,19,4,18,3,17,2,16,1,14,1,13,0,8,0" log="miw"></map></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; position: absolute; left: -9px; top: -143px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -9px; top: 113px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -265px; top: -143px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -265px; top: 113px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 247px; top: -143px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 247px; top: 113px;"></div></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden; width: 200px; height: 200px;"><img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/StaticMapService.png" style="width: 200px; height: 200px;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; position: absolute; left: -9px; top: -143px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/vt_004.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -265px; top: -143px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/vt_005.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -9px; top: 113px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/vt_002.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -265px; top: 113px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/vt.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 247px; top: -143px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/vt_003.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 247px; top: 113px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/vt_006.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a title="Klik untuk melihat area ini di Google Maps" href="http://maps.google.com/maps?ll=-7.357955,109.900564&amp;z=12&amp;t=m&amp;hl=id&amp;gl=US&amp;mapclient=apiv3" target="_blank" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 62px; height: 26px; cursor: pointer;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/google_white2.png" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 26px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></a></div><div style="z-index: 1000001; position: absolute; right: 102px; bottom: 0px; width: 56px;" class="gmnoprint"><div class="gm-style-cc" style="-moz-user-select: none;" draggable="false"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer;">Data Peta</a><span style="display: none;">Data peta ©2014 Google</span></div></div></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto,Arial,sans-serif; color: rgb(34, 34, 34); box-shadow: 0pt 4px 16px rgba(0, 0, 0, 0.2); z-index: 10000002; display: none; width: 146px; height: 148px; position: absolute; left: 5px; top: 10px;"><div style="padding: 0pt 0pt 10px; font-size: 16px;">Data Peta</div><div style="font-size: 13px;">Data peta ©2014 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/mapcnt3.png" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div><div style="position: absolute; right: 0px; bottom: 0px;" class="gmnoscreen"><div style="font-family: Roboto,Arial,sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Data peta ©2014 Google</div></div><div draggable="false" style="z-index: 1000001; position: absolute; -moz-user-select: none; right: 0px; bottom: 0px;" class="gmnoprint gm-style-cc"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a target="_blank" href="http://www.google.com/intl/id_US/help/terms_maps.html" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Syarat Penggunaan</a></div></div><div class="gm-style-cc" style="-moz-user-select: none; position: absolute; right: 0px; bottom: 0px;" draggable="false"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; display: none;"><a href="http://maps.google.com/maps?ll=-7.357955,109.900564&amp;z=12&amp;t=m&amp;hl=id&amp;gl=US&amp;mapclient=apiv3&amp;skstate=action:mps_dialog$apiref:1&amp;output=classic" style="font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;" title="Laporkan kesalahan dalam peta jalan atau citra ke Google" target="_new">Laporkan kesalahan peta</a></div></div><div controlheight="84" controlwidth="32" draggable="false" style="margin: 5px; -moz-user-select: none; position: absolute; left: 0px; top: 0px;" class="gmnoprint"><div controlheight="40" controlwidth="32" style="cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; position: absolute; left: 0px; top: 0px;"><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/cb_scout2.png" style="position: absolute; left: -9px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/cb_scout2.png" style="position: absolute; left: -107px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/cb_scout2.png" style="position: absolute; left: -58px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/cb_scout2.png" style="position: absolute; left: -205px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div><div controlheight="0" controlwidth="0" style="opacity: 0.6; display: none; position: absolute;" class="gmnoprint"><div title="Putar peta 90 derajat" style="width: 22px; height: 22px; overflow: hidden; position: absolute; cursor: pointer;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/mapcnt3.png" style="position: absolute; left: -38px; top: -360px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div><div style="position: absolute; left: 6px; top: 45px;" controlheight="39" controlwidth="20" class="gmnoprint"><div style="width: 20px; height: 39px; overflow: hidden; position: absolute;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/mapcnt3.png" style="position: absolute; left: -39px; top: -401px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div title="Perbesar" style="position: absolute; left: 0px; top: 2px; width: 20px; height: 17px; cursor: pointer;"></div><div title="Perkecil" style="position: absolute; left: 0px; top: 19px; width: 20px; height: 17px; cursor: pointer;"></div></div></div><div style="margin: 5px; z-index: 0; position: absolute; cursor: pointer; text-align: left; width: 85px; right: 0px; top: 0px;" class="gmnoprint gm-style-mtc"><div title="Ubah gaya peta" draggable="false" style="direction: ltr; overflow: hidden; text-align: left; position: relative; color: rgb(0, 0, 0); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 1px 6px; border-radius: 2px 2px 2px 2px; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.15); box-shadow: 0pt 1px 4px -1px rgba(0, 0, 0, 0.3); font-weight: 500;">Peta<img style="-moz-user-select: none; border: 0px none; padding: 0px; margin: -2px 0px 0px; position: absolute; right: 6px; top: 50%; width: 7px; height: 4px;" draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/arrow-down.png"></div><div style="background-color: white; z-index: -1; padding-top: 2px; background-clip: padding-box; border-width: 0pt 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; box-shadow: 0pt 1px 4px -1px rgba(0, 0, 0, 0.3); position: relative; text-align: left; display: none;"><div title="Tunjukkan peta jalan" draggable="false" style="color: black; font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px; font-weight: 500;">Peta</div><div title="Tunjukkan citra satelit" draggable="false" style="color: black; font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px;">Satelit</div><div style="margin: 1px 0pt; border-top: 1px solid rgb(235, 235, 235);"></div><div title="Tunjukkan peta jalan dengan medan" draggable="false" style="color: rgb(0, 0, 0); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap;"><span style="position: relative; line-height: 0; font-size: 0pt; margin: 0pt 5px 0pt 0pt; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px 1px 1px 1px; width: 13px; height: 13px; vertical-align: middle;" role="checkbox"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Medan</label></div><div style="margin: 1px 0pt; border-top: 1px solid rgb(235, 235, 235); display: none;"></div><div title="Perbesar untuk melihat tampilan 45 derajat" draggable="false" style="color: rgb(184, 184, 184); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none;"><span style="position: relative; line-height: 0; font-size: 0pt; margin: 0pt 5px 0pt 0pt; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(241, 241, 241); border-radius: 1px 1px 1px 1px; width: 13px; height: 13px; vertical-align: middle;" role="checkbox"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">45°</label></div><div title="Tunjukkan citra dengan nama jalan" draggable="false" style="color: rgb(0, 0, 0); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none;"><span style="position: relative; line-height: 0; font-size: 0pt; margin: 0pt 5px 0pt 0pt; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px 1px 1px 1px; width: 13px; height: 13px; vertical-align: middle;" role="checkbox"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img draggable="false" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Label</label></div></div></div></div></div></div>
+		</li><li id="text-5" class="widgetcontainer widget_text"><h3 class="widgettitle">Cari dari google</h3>
+			<div class="textwidget"><form action="http://bimosaurus.com/search-result" id="cse-search-box">
+  <div>
+    <input name="cx" value="partner-pub-3417930903351402:1594938086" type="hidden">
+    <input name="cof" value="FORID:10" type="hidden">
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="q" size="35" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;http://www.google.co.id/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" type="text">
+    <input name="sa" value="Search" type="submit">
+  </div>
+<input value="bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/" name="siteurl" type="hidden"><input value="www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=6&amp;cad=rja&amp;uact=8&amp;ved=0CGcQFjAF&amp;url=http%3A%2F%2Fbimosaurus.com%2F2012%2F05%2F01%2Fcontoh-super-simple-paging-halaman-php-mysql%2F&amp;ei=SbSAU6bEL5bk8AXa54HADA&amp;usg=AFQjCNFzpMBZ3UB1Oip4Qh1q6SernJoN0Q&amp;sig2=zxLosTW1cUzv1xegNxQX8g" name="ref" type="hidden"><input name="ss" type="hidden"></form>
+
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/brand"></script></div>
+		</li><!-- Wordpress Popular Posts Plugin v2.3.7 [W] [all] [views] [regular] -->
+<li id="wpp-2" class="widgetcontainer popular-posts">
+<h3 class="widgettitle">Popular Posts</h3>
+<ul class="wpp-list">
+<li><a original-title="[Contoh] Membuat Laporan PDF dengan PHP dan Database MySQL" href="http://bimosaurus.com/2012/04/09/contoh-membuat-laporan-pdf-dengan-php-dan-database-mysql/" class="wpp-post-title" target="_self">[Contoh] Membuat Laporan PDF dengan PHP dan Database MySQL</a> <span class="post-stats"></span></li>
+<li><a original-title="[Share] Bongkar Laptop Axioo Neon MNC 115" href="http://bimosaurus.com/2012/05/04/share-bongkar-laptop-axioo-neon-mnc-115/" class="wpp-post-title" target="_self">[Share] Bongkar Laptop Axioo Neon MNC 115</a> <span class="post-stats"></span></li>
+<li><a original-title="[Contoh] Super Simple Paging Halaman PHP MySQL" href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/" class="wpp-post-title" target="_self">[Contoh] Super Simple Paging Halaman PHP MySQL</a> <span class="post-stats"></span></li>
+<li><a original-title="[Contoh 1] Membuat Laporan Export Data dari MySQL ke Excel dengan PHP (no-pear)" href="http://bimosaurus.com/2012/04/09/contoh-1-membuat-laporan-export-data-dari-mysql-ke-excel-dengan-php-no-pear/" class="wpp-post-title" target="_self">[Contoh 1] Membuat Laporan Export Data dari MySQL ke Excel dengan PHP (no-pear)</a> <span class="post-stats"></span></li>
+<li><a original-title="Tutorial Membuat Aplikasi Webchat dengan PHP, MySQL, JQuery" href="http://bimosaurus.com/2013/07/09/tutorial-membuat-aplikasi-webchat-dengan-php-mysql-jquery/" class="wpp-post-title" target="_self">Tutorial Membuat Aplikasi Webchat dengan PHP, MySQL, JQuery</a> <span class="post-stats"></span></li>
+
+</ul>
+</li>
+<!-- End Wordpress Popular Posts Plugin v2.3.7 -->
+		<li id="recent-posts-3" class="widgetcontainer widget_recent_entries">		<h3 class="widgettitle">Posting Terakhir</h3>
+		<ul>
+					<li>
+				<a href="http://bimosaurus.com/2014/03/13/tentang-nohup/">Tentang NOHUP</a>
+						</li>
+					<li>
+				<a href="http://bimosaurus.com/2014/02/25/tentang-memori-dan-swap/">Tentang Memori dan Swap</a>
+						</li>
+					<li>
+				<a href="http://bimosaurus.com/2013/12/26/tentang-halaman-responsive-responsive-web-design/">Tentang Halaman Responsive (Responsive Web Design)</a>
+						</li>
+					<li>
+				<a href="http://bimosaurus.com/2013/09/21/inilah-peripheral-axioo-mnc-115-p-beberapa-dijual/">Inilah Peripheral Axioo MNC 115 P [beberapa dijual]</a>
+						</li>
+					<li>
+				<a href="http://bimosaurus.com/2013/09/11/bermain-dengan-peta-dan-keterangan-popup-tooltips/">[Tips-Trick] Bermain Dengan Peta dan keterangan Popup Tooltips</a>
+						</li>
+				</ul>
+		</li><li id="tag_cloud-3" class="widgetcontainer widget_tag_cloud"><h3 class="widgettitle">Topik</h3>
+<div class="tagcloud"><a original-title="3 topics" href="http://bimosaurus.com/tag/area/" class="tag-link-233" style="font-size: 9.46087pt;">area</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/array/" class="tag-link-134" style="font-size: 9.46087pt;">array</a>
+<a original-title="18 topics" href="http://bimosaurus.com/tag/cara/" class="tag-link-51" style="font-size: 17.7391pt;">cara</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/chat/" class="tag-link-227" style="font-size: 9.46087pt;">chat</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/command/" class="tag-link-161" style="font-size: 9.46087pt;">command</a>
+<a original-title="17 topics" href="http://bimosaurus.com/tag/contoh/" class="tag-link-47" style="font-size: 17.4957pt;">contoh</a>
+<a original-title="5 topics" href="http://bimosaurus.com/tag/css-2/" class="tag-link-61" style="font-size: 11.6522pt;">css</a>
+<a original-title="7 topics" href="http://bimosaurus.com/tag/download/" class="tag-link-124" style="font-size: 13.113pt;">download</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/error/" class="tag-link-44" style="font-size: 9.46087pt;">error</a>
+<a original-title="5 topics" href="http://bimosaurus.com/tag/excel/" class="tag-link-34" style="font-size: 11.6522pt;">excel</a>
+<a original-title="2 topics" href="http://bimosaurus.com/tag/excel-writer/" class="tag-link-70" style="font-size: 8pt;">excel writer</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/export/" class="tag-link-36" style="font-size: 9.46087pt;">export</a>
+<a original-title="2 topics" href="http://bimosaurus.com/tag/font/" class="tag-link-60" style="font-size: 8pt;">font</a>
+<a original-title="2 topics" href="http://bimosaurus.com/tag/fpdf/" class="tag-link-68" style="font-size: 8pt;">fpdf</a>
+<a original-title="5 topics" href="http://bimosaurus.com/tag/gd/" class="tag-link-138" style="font-size: 11.6522pt;">gd</a>
+<a original-title="8 topics" href="http://bimosaurus.com/tag/grafik/" class="tag-link-42" style="font-size: 13.7217pt;">grafik</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/graph/" class="tag-link-45" style="font-size: 9.46087pt;">graph</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/graphing/" class="tag-link-100" style="font-size: 9.46087pt;">graphing</a>
+<a original-title="6 topics" href="http://bimosaurus.com/tag/html-2/" class="tag-link-62" style="font-size: 12.5043pt;">html</a>
+<a original-title="6 topics" href="http://bimosaurus.com/tag/image/" class="tag-link-136" style="font-size: 12.5043pt;">image</a>
+<a original-title="9 topics" href="http://bimosaurus.com/tag/javascript/" class="tag-link-99" style="font-size: 14.3304pt;">javascript</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/jpgraph/" class="tag-link-43" style="font-size: 9.46087pt;">jpgraph</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/jqplot/" class="tag-link-98" style="font-size: 9.46087pt;">jqplot</a>
+<a original-title="12 topics" href="http://bimosaurus.com/tag/jquery/" class="tag-link-39" style="font-size: 15.6696pt;">jquery</a>
+<a original-title="8 topics" href="http://bimosaurus.com/tag/js/" class="tag-link-29" style="font-size: 13.7217pt;">js</a>
+<a original-title="6 topics" href="http://bimosaurus.com/tag/laporan/" class="tag-link-50" style="font-size: 12.5043pt;">laporan</a>
+<a original-title="6 topics" href="http://bimosaurus.com/tag/linux-2/" class="tag-link-115" style="font-size: 12.5043pt;">linux</a>
+<a original-title="4 topics" href="http://bimosaurus.com/tag/map/" class="tag-link-232" style="font-size: 10.6783pt;">map</a>
+<a original-title="13 topics" href="http://bimosaurus.com/tag/membuat/" class="tag-link-49" style="font-size: 16.1565pt;">membuat</a>
+<a original-title="2 topics" href="http://bimosaurus.com/tag/menambah/" class="tag-link-54" style="font-size: 8pt;">menambah</a>
+<a original-title="2 topics" href="http://bimosaurus.com/tag/more/" class="tag-link-25" style="font-size: 8pt;">more</a>
+<a original-title="27 topics" href="http://bimosaurus.com/tag/mysql-2/" class="tag-link-17" style="font-size: 19.8087pt;">mysql</a>
+<a original-title="4 topics" href="http://bimosaurus.com/tag/no-pear/" class="tag-link-35" style="font-size: 10.6783pt;">no pear</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/paging/" class="tag-link-38" style="font-size: 9.46087pt;">paging</a>
+<a original-title="2 topics" href="http://bimosaurus.com/tag/pdf/" class="tag-link-31" style="font-size: 8pt;">pdf</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/peta/" class="tag-link-231" style="font-size: 9.46087pt;">peta</a>
+<a original-title="42 topics" href="http://bimosaurus.com/tag/php-2/" class="tag-link-30" style="font-size: 22pt;">php</a>
+<a original-title="5 topics" href="http://bimosaurus.com/tag/reporting/" class="tag-link-32" style="font-size: 11.6522pt;">reporting</a>
+<a original-title="2 topics" href="http://bimosaurus.com/tag/reset/" class="tag-link-56" style="font-size: 8pt;">reset</a>
+<a original-title="2 topics" href="http://bimosaurus.com/tag/sql-to-xls/" class="tag-link-37" style="font-size: 8pt;">sql to xls</a>
+<a original-title="5 topics" href="http://bimosaurus.com/tag/upload/" class="tag-link-123" style="font-size: 11.6522pt;">upload</a>
+<a original-title="3 topics" href="http://bimosaurus.com/tag/watermark/" class="tag-link-140" style="font-size: 9.46087pt;">watermark</a>
+<a original-title="6 topics" href="http://bimosaurus.com/tag/web/" class="tag-link-55" style="font-size: 12.5043pt;">web</a>
+<a original-title="2 topics" href="http://bimosaurus.com/tag/writeexcel/" class="tag-link-69" style="font-size: 8pt;">writeexcel</a>
+<a original-title="4 topics" href="http://bimosaurus.com/tag/xls/" class="tag-link-33" style="font-size: 10.6783pt;">xls</a></div>
+</li><li id="recent-comments-3" class="widgetcontainer widget_recent_comments"><h3 class="widgettitle">Komentar Terakhir</h3>
+<ul id="recentcomments"><li class="recentcomments">hema prasetya on <a href="http://bimosaurus.com/2013/07/09/tutorial-membuat-aplikasi-webchat-dengan-php-mysql-jquery/comment-page-1/">Tutorial Membuat Aplikasi Webchat dengan PHP, MySQL, JQuery</a></li><li class="recentcomments">Kharistiyan on <a href="http://bimosaurus.com/2012/05/01/contoh-super-simple-paging-halaman-php-mysql/comment-page-1/">[Contoh] Super Simple Paging Halaman PHP MySQL</a></li><li class="recentcomments"><a href="http://-/" rel="external nofollow" class="url">yayat</a> on <a href="http://bimosaurus.com/2013/07/09/tutorial-membuat-aplikasi-webchat-dengan-php-mysql-jquery/comment-page-1/">Tutorial Membuat Aplikasi Webchat dengan PHP, MySQL, JQuery</a></li><li class="recentcomments"><a href="http://bimosaurus.com/" rel="external nofollow" class="url">bimosaurus</a> on <a href="http://bimosaurus.com/2013/07/09/tutorial-membuat-aplikasi-webchat-dengan-php-mysql-jquery/comment-page-1/">Tutorial Membuat Aplikasi Webchat dengan PHP, MySQL, JQuery</a></li><li class="recentcomments">akkuuuuuh on <a href="http://bimosaurus.com/2013/07/09/tutorial-membuat-aplikasi-webchat-dengan-php-mysql-jquery/comment-page-1/">Tutorial Membuat Aplikasi Webchat dengan PHP, MySQL, JQuery</a></li><li class="recentcomments"><a href="http://bimosaurus.com/" rel="external nofollow" class="url">bimosaurus</a> on <a href="http://bimosaurus.com/2013/07/09/tutorial-membuat-aplikasi-webchat-dengan-php-mysql-jquery/comment-page-1/">Tutorial Membuat Aplikasi Webchat dengan PHP, MySQL, JQuery</a></li><li class="recentcomments">tester on <a href="http://bimosaurus.com/2013/07/09/tutorial-membuat-aplikasi-webchat-dengan-php-mysql-jquery/comment-page-1/">Tutorial Membuat Aplikasi Webchat dengan PHP, MySQL, JQuery</a></li><li class="recentcomments"><a href="http://matahaticorp.com/" rel="external nofollow" class="url">Charli</a> on <a href="http://bimosaurus.com/2012/04/09/contoh-1-membuat-laporan-export-data-dari-mysql-ke-excel-dengan-php-no-pear/comment-page-1/">[Contoh 1] Membuat Laporan Export Data dari MySQL ke Excel dengan PHP (no-pear)</a></li></ul></li><li id="archives-2" class="widgetcontainer widget_archive"><h3 class="widgettitle">Archives</h3>
+		<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;"> <option selected="selected" value="">Select Month</option> 	<option value="http://bimosaurus.com/2014/03/"> March 2014 </option>
+	<option value="http://bimosaurus.com/2014/02/"> February 2014 </option>
+	<option value="http://bimosaurus.com/2013/12/"> December 2013 </option>
+	<option value="http://bimosaurus.com/2013/09/"> September 2013 </option>
+	<option value="http://bimosaurus.com/2013/07/"> July 2013 </option>
+	<option value="http://bimosaurus.com/2013/06/"> June 2013 </option>
+	<option value="http://bimosaurus.com/2013/03/"> March 2013 </option>
+	<option value="http://bimosaurus.com/2013/02/"> February 2013 </option>
+	<option value="http://bimosaurus.com/2012/12/"> December 2012 </option>
+	<option value="http://bimosaurus.com/2012/11/"> November 2012 </option>
+	<option value="http://bimosaurus.com/2012/08/"> August 2012 </option>
+	<option value="http://bimosaurus.com/2012/07/"> July 2012 </option>
+	<option value="http://bimosaurus.com/2012/05/"> May 2012 </option>
+	<option value="http://bimosaurus.com/2012/04/"> April 2012 </option>
+	<option value="http://bimosaurus.com/2012/03/"> March 2012 </option>
+	<option value="http://bimosaurus.com/2012/02/"> February 2012 </option>
+	<option value="http://bimosaurus.com/2011/11/"> November 2011 </option>
+	<option value="http://bimosaurus.com/2011/09/"> September 2011 </option>
+ </select>
+</li>
+				</ul>
+
+		</div><!-- #primary .aside -->
+
+		</div><!-- #main -->
+        
+	<div id="footer">
+            
+	<div id="siteinfo">        
+
+   	Copyright © 2014  / <a original-title="Stripefolio Theme" href="http://synved.com/stripefolio-free-wordpress-portfolio-theme/" target="_blank">Stripefolio</a> by Synved
+	</div><!-- #siteinfo -->
+	
+   		
+	</div><!-- #footer -->
+	
+    </div><!-- #wrapper .hfeed -->  
+
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/hoverIntent.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var stripefolio = {"encoded_json":"{\"path\":\"http:\\\/\\\/bimosaurus.com\\\/wp-content\\\/themes\\\/stripefolio\",\"options\":{\"customTooltips\":true,\"hide\":\"fade_move\",\"hideMode\":\"over_stripe\"},\"stripe\":{\"opaque\":0,\"loader\":\"none\",\"size\":60,\"sizeZoom\":100}}"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/custom.js"></script>
+<div style="margin-bottom:10px; margin-top:10px;">
+<center>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3417930903351402";
+/* header */
+google_ad_slot = "5794523555";
+google_ad_width = 728;
+google_ad_height = 90;
+google_language = "en";
+//-->
+</script>
+<script type="text/javascript" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+</center>
+</div><iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/postmessageRelay.htm" id="oauth2relay1324274126" name="oauth2relay1324274126"></iframe>
+
+
+<div class="footer">
+<div id="clearer"></div>
+
+<center><a href="http://www.mypagerank.net/"><img src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/seostats.png" alt="SEO Stats powered by MyPagerank.Net" border="0"></a></center><br>
+
+<center>
+
+
+<!-- SEO Monitor by MyPagerank.Net -->
+<a href="http://www.mypagerank.net/seomonitor-88559.html" target="_blank"><img original-title="SEO Monitor by MyPagerank.Net" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/seomonitor.png" border="0"></a>
+<!-- SEO Monitor by MyPagerank.Net -->
+<p><a href="http://www.mypagerank.net/"><img original-title="Googlebot last access powered by MyPagerank.Net" src="%5BContoh%5D%20Super%20Simple%20Paging%20Halaman%20PHP%20MySQL%20__files/gbla.png" border="0"></a></p>
+
+
+</center>
+
+
+</div>
+
+
+
+<div style="width: 100%; margin:auto; height: 20px; background-color: #555;border-top: 1px solid #B07D14; position: fixed; bottom: 0;left: 0;right: 0; z-index: 1000; padding:10px; color:#fff; font-family:Verdana; font-size:11px;">
+
+<center><strong>Anda membutuhkan tutorial WEB, SMS Gateway, Linux, Jaringan, PHP, MySQL dan Lainnya? Kirimkan melalui <a href="mailto:bimosaurus@gmail.com">bimosaurus@gmail.com</a> dan akan segera ditanggapi oleh team, GRATIS tapi ANTRI ! ! </strong><br><br>
+
+</center>
+
+
+</div>
+
+
+
+
+</body><iframe src="" style="display: none;"></iframe></html>
